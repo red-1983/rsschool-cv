@@ -67,6 +67,14 @@
   }
   a:active {
   }
+  h1 {
+    font-family: 'Montserrat-SemiBold';
+    text-transform: uppercase;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: calc(32 * 18 / 100 * 1px);
+    text-align: center;
+  }
   h2 {
     font-family: 'Montserrat-SemiBold';
         text-transform: uppercase;
@@ -107,6 +115,10 @@
     margin:0 auto;
     max-width: 1440px;
     min-width: 360px; 
+    }
+    nav .active{
+      background-color: rgba(255, 70, 70, 0.1);
+      coloor:#FF4646;
     }
   header {
     display: flex;
@@ -188,6 +200,7 @@
       align-items: center;
       color:#fff;
       background-color:#181C29 ;
+      border:none;
       font-family: 'Montserrat-SemiBold';
       text-transform: uppercase;
       font-size: 12px;
@@ -195,14 +208,11 @@
       line-height: 15.6px;
       letter-spacing: calc(12 * 5 / 100 * 1px);
     }
-    & h1{
-      font-family: 'Montserrat-SemiBold';
-      text-transform: uppercase;
-      font-size: 32px;
-      line-height: 48px;
-      letter-spacing: calc(32 * 18 / 100 * 1px);
-      text-align: center;
+    & button:hover{
+      color:#181C29;
+      background-color:#fff;
     }
+   
   }
  
 }
@@ -397,62 +407,67 @@ align-items: center;
     display: flex;
     justify-content: space-between;
     gap:12px;
-    & li {
-      width:310px;
-      min-height: 342px;
-      border-radius: 20px;
-      
-      & a {
-        width:310px;
-        min-height: 342px;
-        border-radius: 20px;
-        display: flex;
-        align-items: flex-end;
-        background-color: transparent;
-      }
-      & a:hover h3{
-        color:#FF4646
-      }
-       & div{
-        width: 310px;
-        min-height: 112px;
-        border-radius: 20px;
-        background-color: #fff;
-        padding-top: 20px;
-        padding-left: 20px;
-        text-align: left;
-        & h4 {
-          color:#4361FF;
-          margin-bottom: 8px;
-        }
-        & h3{
-          color:#000;
-
-        }
-
-      }
-    }
-    .for_work{
-      background-image: url('img/Card_work.webp');
-      & h4{
-        color:#4361FF;
-      }
-    }
-    .for_health{
-      background-image: url('img/Card_health.webp');
-      & h4{
-        color:#06A44F;
-      }
-    }
-    .for_harmony{
-      background-image: url('img/Card_harmony.webp');
-      & h4{
-        color:#FF43F7;
-      }
-    }
+   
+   
   
   }
   
+}
+}
+ .gift {
+  width:310px;
+  min-height: 342px;
+  border-radius: 20px;
+  
+  & a {
+    width:310px;
+    min-height: 342px;
+    border-radius: 20px;
+    display: flex;
+    align-items: flex-end;
+    background-color: transparent;
+  }
+  & a:hover h3{
+    color:#FF4646
+  }
+   & div{
+    width: 310px;
+    min-height: 112px;
+    border-radius: 20px;
+    background-color: #fff;
+    padding-top: 20px;
+    padding-left: 20px;
+    text-align: left;
+    & h4 {
+      color:#4361FF;
+      margin-bottom: 8px;
+    }
+    & h3{
+      color:#000;
+
+    }
+
+  }
+ 
+}
+ul {
+.for_work{
+  background-image: url('img/Card_work.webp');
+  & h4{
+    color:#4361FF;
+  }
+}
+.for_health{
+  background-image: url('img/Card_health.webp');
+  & h4{
+    color:#06A44F;
+  }
+}
+.for_harmony{
+  background-image: url('img/Card_harmony.webp');
+  & h4{
+    color:#FF43F7;
+  }
 }
 }
 .CTA_Section {
@@ -488,7 +503,12 @@ align-items: center;
       line-height: 15.6px;
       letter-spacing: calc(12 * 5 / 100 * 1px);
       margin-bottom: 20px;
+      border:none;
 
+  }
+  & button:hover{
+    color:#181C29 ;
+      background-color:#fff ;
   }
   & ul {
     display: flex;
@@ -585,6 +605,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap:12px;
   & li{
    width: 40px;
    min-height: 40px; 
@@ -604,4 +625,60 @@ footer {
   color: #000;
  text-align: center;
 }
+}
+/*страница gifts*/
+
+.gifts {
+  min-height: 1394px;
+  background-image: url('img/Gifts_Section.webp');
+  padding-top: 60px;
+ 
+  & h1{
+    width:426px;
+    color:#fff;
+    margin:0 auto;
+    margin-bottom: 20px;
+  }
+  & .gifts_filter{
+    display: flex;
+    max-width: 474px;
+    min-height: 40px;
+    justify-content:space-between;
+    gap:8px;
+    margin: 0 auto;
+    & li{
+      min-height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 20px;
+      padding-right: 20px;
+      color:#fff;
+      font-family: 'Montserrat-SemiBold';
+      text-transform: uppercase;
+      font-size: 12px;
+      border-radius: 12px;
+      line-height: 15.6px;
+      letter-spacing: calc(12 * 5 / 100 * 1px);
+      margin-bottom: 20px;
+      border:none;
+      cursor: pointer;
+    }
+  }
+   & .gifts_container {
+    
+    margin: 0 auto;
+    width: 1276px;
+    display: grid;
+    grid-template-columns: repeat(4, 310px);
+    grid-template-rows:repeat(3, 342px);
+    gap:12px;
+   }
+    
+    & .active {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+  }
+
 }
