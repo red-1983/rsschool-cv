@@ -1,2 +1,2 @@
 
-https://red-1983.github.io/rsschool-cv/index.html
+https://red-1983.github.io/rsschool-cv/
