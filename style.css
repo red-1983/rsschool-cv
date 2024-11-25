@@ -1,7 +1,6 @@
 .counter_center {
     margin:0 auto;
-    padding:20px 30px;
-  width: 70vw;
+<
 }
 h1 {
     text-align: center;
@@ -87,3 +86,4 @@ font-size: 1.2em;
 .contacts p a {
     color:blue;
 }
+
