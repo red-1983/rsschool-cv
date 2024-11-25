@@ -1,0 +1,89 @@
+.counter_center {
+    margin:0 auto;
+<
+}
+h1 {
+    text-align: center;
+}
+header {
+    display: flex;
+       
+}
+.foto_face p {
+    text-align: center;
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+.foto_face {
+    width: 200px;
+    height: auto;
+    }
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+nav ul li {
+    font-size: 1.5em;
+    margin-left: 5vw;
+    text-align: center;
+    border: 1px solid black;
+margin-bottom: 20px;
+   width:100px;
+}
+nav ul li:hover {
+    background-color: rgb(149, 175, 248);
+}
+nav ul li a {
+  color:rgb(2, 2, 2);  
+}
+.about_me {
+    width: 70vw;
+    text-align: justify ;
+}
+.skills ul li {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    
+}
+figcaption {
+    font-size: 1.2em;
+    color:brown;
+    }
+figure pre {
+    background-color: black;
+    color:white;
+    width:400px;
+
+    }
+.portfolio ul li {
+margin-bottom: 10px;
+
+}
+.portfolio ul li a{
+color:blue;
+font-size: 1.3em;
+border-bottom: 3px dotted black;
+    }
+.contacts ul li{
+margin-bottom: 10px;
+font-size: 1.2em;
+
+}
+.contacts ul li a {
+    color:blue;
+}
+.contacts p {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.contacts p a img{
+   width:70px;
+}
+.contacts p a {
+    color:blue;
+}
+
