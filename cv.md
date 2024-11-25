@@ -1,5 +1,5 @@
 # Yura Benza  
-![logo](img/logo.webp "logo")
+![logo](logo.webp "logo")
 ---
 1. ## Contact:
     * telephone (viber,whatsApp) +375295575149;
