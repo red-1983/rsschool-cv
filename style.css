@@ -114,7 +114,7 @@
     height: 100%;
     margin:0 auto;
     max-width: 1440px;
-    min-width: 360px; 
+    min-width: 380px; 
     }
     nav .active{
       background-color: rgba(255, 70, 70, 0.1);
@@ -143,7 +143,9 @@
         margin-right: 8px;
       }
       }
-      
+      & .toggle_menu{
+          display: none;
+        }
       & ul {
         display: flex;
         justify-content: space-between;
@@ -177,9 +179,50 @@
         }
     }
   }
-.hero {
+  @media (max-width: 769px) {
+    header {
+       
+      padding-left: 8px;
+      padding-right: 8px;
+        & ul {
+          display: none;
+         
+      }
+      & .toggle_menu{
+        display: flex;
+        width: 40px;
+        min-height: 40px;
+        background-color: transparent;
+        position:relative;
+        justify-content: center;
+       align-items: center;
+        border:none;
+      }
+      & .toggle_menu::before {
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 2px;
+        margin-bottom: 4px;
+        background-color: #181C29;
+      }
+      & .toggle_menu::after {
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 2px;
+      margin-top: 4px;
+       background-color: #181C29;
+      }
+    }
+  }
+/*
+  .hero {
   min-height: 524px;
+  width:100%;
   background-image: url('img/Hero_Section.webp');
+  
+  background-size: cover;
   background-repeat: no-repeat;
   padding-top: 60px;
   color:#fff;
@@ -627,7 +670,7 @@ footer {
 }
 }
 /*страница gifts*/
-
+/*
 .gifts {
   min-height: 1394px;
   background-image: url('img/Gifts_Section.webp');
@@ -682,3 +725,4 @@ footer {
   }
 
 }
+*/
