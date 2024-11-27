@@ -59,14 +59,7 @@
     font-style:inherit;
   }
   
-  a:visited  {
-
-  }
-  a:hover, a:focus {
-   
-  }
-  a:active {
-  }
+ 
   h1 {
     font-family: 'Montserrat-SemiBold';
     text-transform: uppercase;
@@ -111,7 +104,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: min-content 1fr min-content;
-    height: 100%;
+    min-height: 100%;
     margin:0 auto;
     max-width: 1440px;
     min-width: 380px; 
@@ -180,7 +173,7 @@
         }
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 768px ) {
     header {
        
       padding-left: 8px;
@@ -228,6 +221,7 @@ background-position: center;
 background-repeat: no-repeat;
 
 }
+
 @media (max-width: 768px) {
 .main {
 min-height: 3236px;
@@ -236,6 +230,15 @@ background-size: 768px 100%;
 }
 
 }
+@media (max-width: 550px) {
+  .main {
+  min-height: 3700px;
+  background-image: url('img/main_550px.webp');
+  background-size: 550px 100%;
+  }
+  
+  }
+
 @media (max-width: 380px) {
   .main {
   min-height: 4416px;
@@ -244,6 +247,7 @@ background-size: 768px 100%;
   }
   
   }
+  
   .hero {
   min-height: 524px;
   width:100%;
@@ -283,6 +287,7 @@ background-size: 768px 100%;
   }
  
 } 
+
  .about {
   min-height: 648px;
   display: flex;
@@ -340,14 +345,14 @@ background-size: 768px 100%;
   .about {
      
       & .about_container{
-         max-width: 752px;
+         width: 97%;
       & .about_text {
-        width:256px;
+        width:34%;
         min-height: 436px;
         
       }   
       & .about_img{
-        width: 376px; 
+        width: calc(97% - 34% ); 
         background-position: center;
       
       }
@@ -355,8 +360,7 @@ background-size: 768px 100%;
     }
   }
 }
-
-@media (max-width: 380px) {
+@media (max-width: 550px) {
   .about {
     margin-top: 60px;
     width:100%;
@@ -364,14 +368,14 @@ background-size: 768px 100%;
       & .about_container{
        display: block;
        margin: 0 auto;
-        max-width: 364px;
+        max-width: 90%;
         min-height: 800px;
         background-color: #fff;
         border-radius: 20px;
         padding-left: 0px;
   
       & .about_text {
-        width:324px;
+        width:80%;
         min-height: 352px;
        margin:0 auto;
         display: flex;
@@ -398,12 +402,28 @@ background-size: 768px 100%;
   
       }   
       & .about_img{
-        width: 364px; 
+        width: 100%; 
         min-height: 528px;
         background-image: url('img/santa.webp');
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 20px;
+      }
+       
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .about {
+      & .about_container{
+         max-width: 364px;
+      & .about_text {
+        width:324px;
+      }
+      & .about_img{
+        width: 364px; 
+        
       }
        
     }
@@ -975,3 +995,4 @@ footer {
      }
   }
 }
+  
