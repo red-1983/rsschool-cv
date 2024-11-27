@@ -59,15 +59,7 @@
     font-size:inherit;
     font-style:inherit;
   }
-  
-  a:visited  {
 
-  }
-  a:hover, a:focus {
-   
-  }
-  a:active {
-  }
   h1 {
     font-family: 'Montserrat-SemiBold';
     text-transform: uppercase;
@@ -956,7 +948,7 @@ footer {
       gap: auto;
      }
 }
-=======
+
 * {
     margin:0;
     padding:0;
@@ -1018,14 +1010,7 @@ footer {
     font-style:inherit;
   }
   
-  a:visited  {
-
-  }
-  a:hover, a:focus {
-   
-  }
-  a:active {
-  }
+  
   h1 {
     font-family: 'Montserrat-SemiBold';
     text-transform: uppercase;
@@ -1913,6 +1898,5 @@ footer {
      
       gap: auto;
      }
-}
-
+  }
 }
