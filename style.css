@@ -282,7 +282,7 @@ background-size: 768px 100%;
    
   }
  
-}
+} 
  .about {
   min-height: 648px;
   display: flex;
@@ -355,6 +355,7 @@ background-size: 768px 100%;
     }
   }
 }
+
 @media (max-width: 380px) {
   .about {
     margin-top: 60px;
@@ -758,7 +759,7 @@ ul {
       width:100%;
   }
 }
-
+}
 footer {
   min-height: 496px;
   padding-bottom: 60px;
@@ -879,6 +880,7 @@ footer {
     }
    
     }
+    
 /*страница gifts*/
 
 .gifts {
