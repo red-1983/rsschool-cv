@@ -861,7 +861,24 @@ footer {
   }
  
   }
-
+  @media (max-width: 380px) {
+    footer {
+     
+      & .contact_list {
+    
+        & li {
+          width:97%;
+         
+          & a {
+            width:100%;
+          ;
+          }
+        }
+      
+    }
+    }
+   
+    }
 /*страница gifts*/
 
 .gifts {
@@ -954,5 +971,5 @@ footer {
      
       gap: auto;
      }
-}
+  }
 }
