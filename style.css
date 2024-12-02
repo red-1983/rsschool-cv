@@ -13,6 +13,7 @@
   ul{
     list-style-type: none;
   }
+  
   @font-face {
     font-family: 'Montserrat-SemiBold'; 
     src: url(fonts/Montserrat/static/Montserrat-SemiBold.ttf) format("ttf");
@@ -99,6 +100,7 @@
   }
   html {
     height: 100%;
+    scroll-behavior: smooth;
   }
   body{
     display: grid;
@@ -175,14 +177,82 @@
   }
   @media (max-width: 768px ) {
     header {
-       
+       position:relative;
       padding-left: 8px;
       padding-right: 8px;
-        & ul {
-          display: none;
-         
-      }
-      & .toggle_menu{
+        & nav{ 
+          
+          & .open_menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            
+            top:64px;
+            right:-100%;
+            max-width:768px;
+            width:100%;
+            gap:8px;
+            height: 100vh;
+            z-index: 3;
+            background-color: #fff;
+            animation-name: showMenu;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;           
+          & li {
+            min-height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & a {
+              font-family: 'Montserrat';
+              font-size: 24px;
+              font-weight: 600;
+              line-height: 36.48px;
+              letter-spacing: 0.16em;
+              
+              
+            }
+          }
+          } 
+          & .close_menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+           
+            top:64px;
+            right:-100%;
+            max-width:768px;
+            width:100%;
+            gap:8px;
+            height: 100vh;
+            z-index: 3;
+            background-color: #fff;
+            animation-name: closeMenu;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;           
+          & li {
+            min-height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & a {
+              font-family: 'Montserrat';
+              font-size: 24px;
+              font-weight: 600;
+              line-height: 36.48px;
+              letter-spacing: 0.16em;
+              
+              
+            }
+          }
+          } 
+        
+          
+      & .toggle_close, .toggle_open{
         display: flex;
         width: 40px;
         min-height: 40px;
@@ -193,25 +263,98 @@
         border:none;
         
       }
-      & .toggle_menu::before {
+      & .toggle_close::before {
         position: absolute;
         content: '';
         width: 20px;
         height: 2px;
-       margin-bottom: 4px;
-
+        margin-bottom: 4px;
         background-color: #181C29;
+        animation-name: close_before;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
       }
-      & .toggle_menu::after {
+      & .toggle_close::after {
         position: absolute;
         content: '';
         width: 20px;
         height: 2px;
       margin-top: 4px;
        background-color: #181C29;
+       animation-name: close_after;
+       animation-duration: 2s;
+       animation-fill-mode: forwards;
       }
+      
+      & .toggle_open::before {
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 2px;
+       margin-bottom: 4px;
+       animation-name: rotate_before;
+       animation-duration: 2s;
+       animation-fill-mode: forwards; 
+        background-color: #181C29;
+      }
+      & .toggle_open::after {
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 2px;
+      margin-top: 4px;
+       background-color: #181C29;
+       animation-name: rotate_after;
+       animation-duration: 2s;
+       animation-fill-mode: forwards;
+      } 
+        }
+      
     }
+    
   }
+  @keyframes showMenu {
+    from {right: -100%}
+     to {right: 0px;}
+  }
+  @keyframes closeMenu {
+    from {right: 0px;}
+     to {right: -100%;}
+  }
+  @keyframes rotate_before {
+    to{
+      transform: rotate(45deg) translateY(2.5px);
+      width: 25px;
+    }
+  } 
+  @keyframes rotate_after {
+    to{
+      transform: rotate(-45deg) translateY(-2.5px);
+      width: 25px;
+    }
+  } 
+  @keyframes close_before {
+    from{
+      transform: rotate(45deg) translateY(2.5px);
+      width: 25px;
+    }
+    to{
+      transform: rotate(0deg) translateY(0px);
+      width: 20px;
+    }
+  } 
+  @keyframes close_after {
+    from{ 
+      
+        transform: rotate(-45deg) translateY(-2.5px);
+        width: 25px;
+      
+    }
+    to{
+      transform: rotate(0deg) translateY(0px);
+      width: 20px;
+    }
+  } 
 .main {
 width:100%;
 min-height: 2882px;
@@ -430,137 +573,138 @@ background-size: 768px 100%;
   }
 }
 
-.slider {
-  min-height: 488px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
- 
-  & .slider_container{
-    width: 87%;
-    min-height: 368px;
+  .slider {
+    min-height: 488px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  
+    & .slider_container{
+      width: 87%;
+      min-height: 368px;
+      
+      text-align: center;
     
-    text-align: center;
-   
-    & p {
-   
-      color:#fff;
-    }
-    & h2 {
-      margin-top: 12px;
-      color:#fff;
-      margin-bottom: 20px;
-    }
-    & .carousel_container{
-      position: relative;
-      min-height: 200px;
-      width: 100%;
-    }
-    & .carousel {
-      position: absolute;
-      width: 1993px;
-      min-height: 200px;
-      display: flex;
-      gap:20px;
-      align-items: center;
-      justify-content: space-around;
       & p {
-      font-family: 'Montserrat-SemiBold',sans-serif;
-      text-transform: uppercase;
-      font-size: 80px;
+    
+        color:#fff;
       }
-      & img {
-        border-radius: 20px;
+      & h2 {
+        margin-top: 12px;
+        color:#fff;
+        margin-bottom: 20px;
       }
-
-    }
-    & ul {
-      display: flex;
-     gap:20px;
-    justify-content: end;
-      margin-top: 20px;
-      
-      & button{
+      & .carousel_container{
         position: relative;
-        width: 56px;
-        height: 56px;
-        border-radius: 20px;
-        background-color: transparent;
-        border:1px solid #fff;
+        min-height: 200px;
+        width: 100%;
+      }
+      & .carousel {
+        position: absolute;
+        
+        width: 1993px;
+        min-height: 200px;
         display: flex;
-        justify-content: center;
+        gap:20px;
         align-items: center;
-        & span {
-          width:12.5px;
-          height: 1px;
-          background-color: #fff;
+        justify-content: space-around;
+        & p {
+        font-family: 'Montserrat-SemiBold',sans-serif;
+        text-transform: uppercase;
+        font-size: 80px;
+        }
+        & img {
+          border-radius: 20px;
+        }
+
+      }
+      & ul {
+        display: flex;
+      gap:20px;
+      justify-content: end;
+        margin-top: 20px;
+        
+        & button{
           position: relative;
-        }
-      
-        & .arrow_left::before{
-          position: absolute;
-          content: '';
+          width: 56px;
+          height: 56px;
+          border-radius: 20px;
+          background-color: transparent;
+          border:1px solid #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          & span {
+            width:12.5px;
+            height: 1px;
+            background-color: #fff;
+            position: relative;
+          }
+        
+          & .arrow_left::before{
+            position: absolute;
+            content: '';
 
-          top:2.5px;
-          left:-1.5px;
-          width:8px;
-          height: 1px;
-          background-color: #fff;
-          transform: rotate(45deg);
-        }
-        & .arrow_left::after{
-          position: absolute;
-          content: '';
+            top:2.5px;
+            left:-1.5px;
+            width:8px;
+            height: 1px;
+            background-color: #fff;
+            transform: rotate(45deg);
+          }
+          & .arrow_left::after{
+            position: absolute;
+            content: '';
 
-          top:-2.5px;
-          left:-1.5px;
-          width:8px;
-          height: 1px;
-          background-color: #fff;
-          transform: rotate(-45deg);
-        }
-        & .arrow_right::before{
-          position: absolute;
-          content: '';
+            top:-2.5px;
+            left:-1.5px;
+            width:8px;
+            height: 1px;
+            background-color: #fff;
+            transform: rotate(-45deg);
+          }
+          & .arrow_right::before{
+            position: absolute;
+            content: '';
 
-          top:2.5px;
-          right:-1.5px;
-          width:8px;
-          height: 1px;
-          background-color: #fff;
-          transform: rotate(-45deg);
-        }
-        & .arrow_right::after{
-          position: absolute;
-          content: '';
+            top:2.5px;
+            right:-1.5px;
+            width:8px;
+            height: 1px;
+            background-color: #fff;
+            transform: rotate(-45deg);
+          }
+          & .arrow_right::after{
+            position: absolute;
+            content: '';
 
-          top:-2.5px;
-          right:-1.5px;
-          width:8px;
-          height: 1px;
-          background-color: #fff;
-          transform: rotate(45deg);
-        }
+            top:-2.5px;
+            right:-1.5px;
+            width:8px;
+            height: 1px;
+            background-color: #fff;
+            transform: rotate(45deg);
+          }
+      }
+      & button:hover{
+        background-color: #fff;
+      }
+      & button:hover span, button:hover span::before, button:hover span::after{
+        background-color: #FF4646;
+      }   
+      & button:disabled, button:disabled:hover{
+        background-color: transparent;
+        cursor:default;
+        border-color: rgba(255, 255, 255, 0.4);
+      }
+      & button:disabled span, button:disabled span::before, button:disabled span::after, button:disabled:hover span, button:disabled:hover span::before, button:disabled:hover span::after{
+        background-color: rgba(255, 255, 255, 0.4);
+      }
     }
-    & button:hover{
-      background-color: #fff;
-    }
-    & button:hover span, button:hover span::before, button:hover span::after{
-      background-color: #FF4646;
-    }   
-    & button:disabled, button:disabled:hover{
-      background-color: transparent;
-      cursor:default;
-      border-color: rgba(255, 255, 255, 0.4);
-    }
-    & button:disabled span, button:disabled span::before, button:disabled span::after, button:disabled:hover span, button:disabled:hover span::before, button:disabled:hover span::after{
-      background-color: rgba(255, 255, 255, 0.4);
-    }
+
   }
-
-}
-}
+  }
 @media (max-width: 768px) {
   .slider {
    
