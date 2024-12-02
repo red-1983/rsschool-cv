@@ -16,14 +16,14 @@
    <body >
     <header>
        <a href="#" class="logo"> <img src="favicon.svg" alt="favicon"> <span>the gifts</span></a> 
-        <nav>
-            <ul>
+        <nav id="header_nav">
+            <ul class="close_menu" id="header_menu">
                <li><a href="gifts.html" aria-label="link to gifts">gifts</a></li>
                <li><a href="#about" aria-label="link to about">about</a></li>
                <li><a href="#best" aria-label="link to best">best</a></li>
                <li><a href="#contacts" aria-label="link to contacts">contacts</a></li>
             </ul>
-            <button class="toggle_menu "></button>
+            <button class="toggle_close" id="toggle_header-menu"></button>
         </nav>
     </header>
     <main class="main">
@@ -48,13 +48,13 @@
             </div>
             
         </section>
-        <section class="slider">
+        <section class="slider" id="slider">
             
             <div class="slider_container">
                 <p class="content_Allura">Become Happier!</p>
                 <h2>in the new 2025</h2>
-                <div class="carousel_container">
-                  <div class="carousel">
+                <div class="carousel_container" id="carousel_container">
+                  <div class="carousel" id="carousel">
                     <p>live</p>
                     <img src="img/snowman.webp" width="200" height="200" alt="snowman">
                     <p>create</p>
@@ -67,8 +67,8 @@
                 </div>
                 
                 <ul>
-                    <li><button disabled class="button_left"><span class="arrow_left"></span></button></li>
-                    <li><button class="button_right"><span class="arrow_right"></span></button></li>
+                    <li><button class="button_left" id="carousel_left"><span class="arrow_left"></span></button></li>
+                    <li><button class="button_right" id="carousel_right"><span class="arrow_right"></span></button></li>
                 </ul>
             </div>
 
@@ -119,10 +119,10 @@
                 <button>Explore Magical Gifts</button>
                 <p>The New Year is Coming Soon...</p>
                 <ul>
-                    <li class="days"> <h2>47</h2> <h4>Days</h4></li>
-                    <li class="hours"><h2>5</h2><h4>Hours</h4></li>
-                    <li class="minutes"><h2>34</h2><h4>Minutes</h4></li>
-                    <li class="seconds"><h2>12</h2><h4>Seconds</h4></li>
+                    <li class="days"> <h2 id="days">47</h2> <h4>Days</h4></li>
+                    <li class="hours"><h2 id="hours">5</h2><h4>Hours</h4></li>
+                    <li class="minutes"><h2 id="minutes">34</h2><h4>Minutes</h4></li>
+                    <li class="seconds"><h2 id="seconds">12</h2><h4>Seconds</h4></li>
                 </ul>
             </div>
         </section>
